@@ -4,11 +4,10 @@
     android:layout_height="match_parent" >
 
     <!-- Adding Grid View -->
-    <GridView
-        android:id="@+id/gv_movie_display"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_movie_display"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3" />
+        android:layout_height="match_parent" />
 
     <!-- Display Error Message -->
     <TextView

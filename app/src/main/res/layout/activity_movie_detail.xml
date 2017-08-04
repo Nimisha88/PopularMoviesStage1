@@ -1,99 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.moviemania.MovieDetailActivity"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    tools:context="com.example.android.moviemania.MovieDetailActivity">
+    android:scrollbars="vertical"
+    android:fillViewport="true" >
 
-    <ImageView
-        android:id="@+id/img_thumbnail"
-        android:contentDescription="@string/movie_poster_text"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
-        android:scaleType="fitXY" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="2"
-        android:padding="8dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="-3"
+            android:shadowDy="-3"
+            android:shadowRadius="1"
+            android:elevation="8dp"
+            android:translationZ="2dp" >
 
-        <TextView
-            android:id="@+id/tv_movie_title_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/img_thumbnail"
+                android:contentDescription="@string/movie_poster_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:padding="8dp"
-            android:text="@string/movie_title_text"
-            android:background="@android:color/holo_red_light"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_movie_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_movie_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/movie_title_text"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@color/text_font_white"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-3"
+                android:shadowDy="-3"
+                android:shadowRadius="1"
+                android:elevation="8dp"
+                android:translationZ="2dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_movie_overview_text"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/movie_overview_text"
-            android:background="@android:color/holo_red_light"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_movie_overview"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_movie_overview_text"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_overview_text"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@color/text_font_white"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-3"
+                android:shadowDy="-3"
+                android:shadowRadius="1"
+                android:elevation="8dp"
+                android:translationZ="2dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_movie_vote_average_text"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/movie_vote_average_text"
-            android:background="@android:color/holo_red_light"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_movie_overview"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_movie_vote_average"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_movie_vote_average_text"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_vote_average_text"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@color/text_font_white"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-3"
+                android:shadowDy="-3"
+                android:shadowRadius="1"
+                android:elevation="8dp"
+                android:translationZ="2dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_release_date_text"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/movie_release_date_text"
-            android:background="@android:color/holo_red_light"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <RatingBar
+                    android:id="@+id/rb_movie_vote_average"
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="10"
+                    android:theme="@style/GoldenRatingBar"
+                    style="?android:attr/ratingBarStyleSmall" />
+                <TextView
+                    android:id="@+id/tv_movie_vote_average"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_release_date"
-            android:padding="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_release_date_text"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_release_date_text"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@color/text_font_white"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-3"
+                android:shadowDy="-3"
+                android:shadowRadius="1"
+                android:elevation="8dp"
+                android:translationZ="2dp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

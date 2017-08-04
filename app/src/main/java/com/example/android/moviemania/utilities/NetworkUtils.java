@@ -2,9 +2,7 @@ package com.example.android.moviemania.utilities;
 
 import android.content.Context;
 import android.net.Uri;
-
-import com.example.android.moviemania.R;
-
+import com.example.android.moviemania.BuildConfig;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -64,7 +62,8 @@ public final class NetworkUtils {
     }
 
     public static URL buildMovieURL(String userChoice, Context activityContext) {
-        String apiKey = activityContext.getString(R.string.api_key);
+        //String apiKey = activityContext.getString(R.string.api_key);
+        String apiKey = BuildConfig.API_KEY;
         Uri builtUri = Uri.parse(MOVIE_BASE_URL).buildUpon().appendPath(userChoice).appendQueryParameter(API_PARAM_NAME, apiKey).build();
         URL builtURL = null;
 

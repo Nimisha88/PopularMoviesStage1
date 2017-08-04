@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">MovieMania</string>
-    <!-- API Key needs to be added here -->
-    <string name="api_key"></string>
     <string name="error_message">Sorry :(! Looks like something went wrong!! Please check your Internet Connection and try again.</string>
     <string name="movie_title_text">Movie Title</string>
     <string name="movie_overview_text">Movie Overview</string>
